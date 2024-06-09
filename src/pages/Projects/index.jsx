@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Accordion } from "../../components/common/Accordion";
 import { Breadcrumb } from "../../components/common/Breadcrumb";
 import { Year, Industry } from "./Filters";
+import { ArrowRightAlt } from "@mui/icons-material";
+import newsImage1 from "../../assets/images/Home/News/main4.webp";
 
 export const Projects = () => {
   const breadcrumbs = [{ label: "Projects", href: "/projects" }];
@@ -9,14 +11,14 @@ export const Projects = () => {
   return (
     <div>
       <Breadcrumb heading="Current Report" breadcrumbs={breadcrumbs} />
-      <div className="grid grid-flow-col grid-cols-12 mt-16 px-16">
-        <div className="col-span-2 rounded-md shadow-2xl">
+      <div className="grid grid-flow-row lg:grid-flow-col lg:grid-cols-12 mt-16 px-4 lg:px-16 gap-10">
+        <div className="lg:col-span-2 rounded-md shadow-2xl">
           <Accordion title="Industry" ContentComponent={Industry} index={0} />
           <Accordion title="Years" ContentComponent={Year} index={1} />
           <Accordion title="Brands" ContentComponent={Industry} index={2} />
         </div>
-        <div className="col-span-10 px-16">
-          <form class="">
+        <div className="lg:col-span-10">
+          <form class="mt-10 lg:mt-0">
             <label
               for="default-search"
               class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -56,6 +58,108 @@ export const Projects = () => {
               </button>
             </div>
           </form>
+          <div className="grid lg:grid-cols-12 mt-4 gap-3">
+            {/* Card One */}
+            <div className="lg:h-[320px] flex flex-col lg:col-span-3">
+              <img
+                src={newsImage1}
+                className="w-full h-full object-cover basis-1/2"
+                alt="newsimage"
+              />
+              <div className="bg-[#EEEFF0] p-8 text-left flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-medium">News</h3>
+                  <p className="mt-2">
+                    Click here for updates on our projects and what’s going on
+                    in our studio.
+                  </p>
+                  <p className="mt-2">
+                    You can also follow us on social media using the links
+                    below.
+                  </p>
+                </div>
+                <a href="/" className="tracking-widest text-base group mt-5">
+                  More
+                  <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
+                </a>
+              </div>
+            </div>
+            {/* Card One */}
+            <div className="lg:h-[320px] flex flex-col lg:col-span-3">
+              <img
+                src={newsImage1}
+                className="w-full h-full object-cover basis-1/2"
+                alt="newsimage"
+              />
+              <div className="bg-[#EEEFF0] p-8 text-left flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-medium">News</h3>
+                  <p className="mt-2">
+                    Click here for updates on our projects and what’s going on
+                    in our studio.
+                  </p>
+                  <p className="mt-2">
+                    You can also follow us on social media using the links
+                    below.
+                  </p>
+                </div>
+                <a href="/" className="tracking-widest text-base group mt-5">
+                  More
+                  <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
+                </a>
+              </div>
+            </div>
+            {/* Card One */}
+            <div className="lg:h-[320px] flex flex-col lg:col-span-3">
+              <img
+                src={newsImage1}
+                className="w-full h-full object-cover basis-1/2"
+                alt="newsimage"
+              />
+              <div className="bg-[#EEEFF0] p-8 text-left flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-medium">News</h3>
+                  <p className="mt-2">
+                    Click here for updates on our projects and what’s going on
+                    in our studio.
+                  </p>
+                  <p className="mt-2">
+                    You can also follow us on social media using the links
+                    below.
+                  </p>
+                </div>
+                <a href="/" className="tracking-widest text-base group mt-5">
+                  More
+                  <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
+                </a>
+              </div>
+            </div>
+            {/* Card One */}
+            <div className="lg:h-[320px] flex flex-col lg:col-span-3">
+              <img
+                src={newsImage1}
+                className="w-full h-full object-cover basis-1/2"
+                alt="newsimage"
+              />
+              <div className="bg-[#EEEFF0] p-8 text-left flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-medium">News</h3>
+                  <p className="mt-2">
+                    Click here for updates on our projects and what’s going on
+                    in our studio.
+                  </p>
+                  <p className="mt-2">
+                    You can also follow us on social media using the links
+                    below.
+                  </p>
+                </div>
+                <a href="/" className="tracking-widest text-base group mt-5">
+                  More
+                  <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
