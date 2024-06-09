@@ -11,7 +11,7 @@ const HomeMainSectionOne = () => {
       <div className="md:col-span-6 relative h-[320px] md:h-[448px]">
         <img
           src={mainImage1}
-          alt="Image 1"
+          alt="Image1"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 overlay flex p-4 md:p-8">
@@ -32,7 +32,7 @@ const HomeMainSectionOne = () => {
       <div className="md:col-span-3 h-[320px] md:h-[448px] relative">
         <img
           src={mainImage2}
-          alt="Image 2"
+          alt="Image2"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 overlay flex p-4 md:p-8">
@@ -43,7 +43,7 @@ const HomeMainSectionOne = () => {
               their projects.
             </p>
             <div className="flex items-center text-base md:text-xl tracking-wider group">
-              <a href="#" className="text-white tracking-widest">
+              <a href="/" className="text-white tracking-widest">
                 Services
               </a>
               <ArrowRightAlt className="ml-2 transition-transform transform group-hover:translate-x-1" />
@@ -55,11 +55,11 @@ const HomeMainSectionOne = () => {
       <div className="md:col-span-3 h-[320px] md:h-[448px] relative">
         <img
           src={mainImage3}
-          alt="Image 3"
+          alt="Image3"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 overlay flex items-end p-4 md:p-8 text-white tracking-widest group">
-          <a href="#" className="text-overlay text-base md:text-xl">
+          <a href="/" className="text-overlay text-base md:text-xl">
             Portfolio
           </a>
           <ArrowRightAlt className="ml-2 transition-transform transform group-hover:translate-x-1" />

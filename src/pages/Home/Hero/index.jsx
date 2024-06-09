@@ -31,7 +31,7 @@ const HeroSlider = () => {
         backgroundImage: `url(${images[currentImageIndex]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "100vh", // Use minHeight instead of fixed height
+        minHeight: "100vh",
       }}
     >
       <img

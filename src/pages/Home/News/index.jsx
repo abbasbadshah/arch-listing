@@ -17,7 +17,7 @@ export const News = () => {
               You can also follow us on social media using the links below.
             </p>
           </div>
-          <a href="#" className="tracking-widest text-base group mt-5">
+          <a href="/" className="tracking-widest text-base group mt-5">
             More
             <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
           </a>
@@ -25,7 +25,7 @@ export const News = () => {
         <img
           src={newsImage1}
           className="w-full h-full object-cover basis-1/2"
-          alt="news image"
+          alt="newsimage"
         />
       </div>
       {/* Card Two */}
@@ -41,7 +41,7 @@ export const News = () => {
               You can also follow us on social media using the links below.
             </p>
           </div>
-          <a href="#" className="tracking-widest text-base group mt-5">
+          <a href="/" className="tracking-widest text-base group mt-5">
             More
             <ArrowRightAlt className="transform transition-transform duration-300 group-hover:translate-x-2" />
           </a>
@@ -49,7 +49,7 @@ export const News = () => {
         <img
           src={newsImage1}
           className="w-full h-full object-cover basis-1/2"
-          alt="news image"
+          alt="newsimage"
         />
       </div>
     </div>

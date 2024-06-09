@@ -15,8 +15,8 @@ export const Footer = () => {
           Banbury, Oxfordshire OX16 9AF
         </p>
         <div className="mt-2 flex flex-col">
-          <a>0330 320 0665</a>
-          <a>Email Oxfordshire office</a>
+          <a href="tel:0330 320 0665">0330 320 0665</a>
+          <a href="mailto:example@mail.com">Email Oxfordshire office</a>
         </div>
         <p className="mt-2">
           <span className="font-bold">London office:</span>55 Whitfield Street
@@ -24,8 +24,8 @@ export const Footer = () => {
           Fitzrovia, London W1T 4AHF
         </p>
         <div className="mt-2">
-          <a>0330 320 0665</a>
-          <a>Email Oxfordshire office</a>
+          <a href="tel:0330 320 0665">0330 320 0665</a>
+          <a href="mailto:example@mail.com">Email Oxfordshire office</a>
         </div>
       </div>
       {/* Section Two */}
@@ -33,32 +33,32 @@ export const Footer = () => {
         <h1 className="tracking-widest text-lg "> PORTFOLIO </h1>
         <ul className="mt-4 flex flex-col gap-1">
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Contemporary homes
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Traditional homes
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Refurbishments & extensions
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Commercial property projects
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Education projects
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               View all
             </a>
           </li>
@@ -69,37 +69,37 @@ export const Footer = () => {
         <h1 className="tracking-widest text-lg "> INFORMATION </h1>
         <ul className="mt-4 flex flex-col gap-1">
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Studio
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Services
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               News
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Thoughts
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Quality assurance
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Current vacancies
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               Sustainability
             </a>
           </li>
@@ -110,22 +110,22 @@ export const Footer = () => {
         <h1 className="tracking-widest text-lg "> FOLLOW US </h1>
         <ul className="mt-4 flex gap-3">
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               <Facebook />
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               <Instagram />
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               <LinkedIn />
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline hover:transition">
+            <a href="/" className="hover:underline hover:transition">
               <X />
             </a>
           </li>
@@ -155,22 +155,22 @@ export const Footer = () => {
         <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center space-x-4 mt-4">
           <span> Share on:</span>
           <div className="grid grid-cols-3 mt-2">
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               Facebook
             </a>
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               Twitter/X
             </a>
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               Instagram
             </a>
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               LinkedIn
             </a>
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               WhatsApp
             </a>
-            <a href="#" className="text-white hover:text-gray-300 col-span-1">
+            <a href="/" className="text-white hover:text-gray-300 col-span-1">
               Email
             </a>
           </div>
