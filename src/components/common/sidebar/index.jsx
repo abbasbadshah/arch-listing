@@ -1,12 +1,13 @@
-import { Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
+import { Close, Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
 import logo from "../../../assets/images/Header/arclogoblack.png";
 import React, { useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-
-    const navigate = useNavigate();
-    const navigateToAbout = () => {navigate('/about')}
+  const navigate = useNavigate();
+  const navigateToAbout = () => {
+    navigate("/about");
+  };
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
@@ -21,13 +22,17 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div>
       <div
-        className={`fixed inset-y-0 flex flex-col justify-between left-0 z-[999] lg:w-[700px] bg-white text-gray-700 text-left transition-transform duration-300 transform pt-0 pb-16 px-16 ${
+        className={`fixed inset-y-0 flex flex-col justify-between overflow-scroll left-0 z-[999] w-full lg:w-[700px] bg-white text-gray-700 text-left transition-transform duration-300 transform pt-0 pb-16 px-4 lg:px-16  ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-4">
-          <img src={logo} alt="logo" className="h-20" />
-          <nav className="mt-40 text-lg tracking-widest">
+          <img src={logo} alt="logo" className="hidden lg:block h-14 lg:h-20" />
+          <div className="lg:hidden flex justify-between items-center">
+            <img src={logo} alt="logo" className="h-14 lg:h-20" />
+            <Close onClick={toggleSidebar} />
+          </div>
+          <nav className="mt-10 lg:mt-40 text-lg tracking-widest">
             <ul className="cursor-pointer">
               <li className="mb-2">
                 <a href="/" className="block px-3 py-2 rounded-md">
@@ -35,7 +40,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </a>
               </li>
               <li className="mb-2">
-                <a onClick={navigateToAbout} className="block px-3 py-2 rounded-md">
+                <a
+                  onClick={navigateToAbout}
+                  className="block px-3 py-2 rounded-md"
+                >
                   ABOUT
                 </a>
               </li>
