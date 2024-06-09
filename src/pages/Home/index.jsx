@@ -6,7 +6,7 @@ import { News } from "./News";
 
 export const HomePage = () => {
   return (
-    <Layout>
+    <Layout headerType="header1">
       <HeroSlider />
       <Section>
         <HomeMainSectionOne />

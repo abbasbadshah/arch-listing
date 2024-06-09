@@ -3,10 +3,11 @@ import { Breadcrumbs, Link, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled("div")`
   position: relative;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: #f5f5f4;
   padding: 50px 0;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -28,7 +29,7 @@ const Overlay = styled("div")`
 const Heading = styled(Typography)`
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   z-index: 10;
 `;
 
@@ -37,22 +38,26 @@ const BreadcrumbContainer = styled(Breadcrumbs)`
   margin-top: 1rem;
 
   .MuiBreadcrumbs-separator {
-    color: rgba(255, 255, 255, 0.7);
+    color: #000;
   }
 `;
 
 const BreadcrumbLink = styled(Link)`
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   font-weight: 500;
   transition: color 0.3s;
-  decoration: none;
+  text-decoration: none;
 
   &:hover {
-    color: #fff;
+    color: #000;
   }
 `;
 
 export const Breadcrumb = ({ heading, breadcrumbs }) => {
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate("/");
+  };
   return (
     <Container className="py-8">
       <Overlay />
@@ -61,7 +66,10 @@ export const Breadcrumb = ({ heading, breadcrumbs }) => {
         separator={<NavigateNextIcon />}
         className="flex justify-center"
       >
-        <BreadcrumbLink href="/" className="flex items-center">
+        <BreadcrumbLink
+          onClick={navigateToHome}
+          className="flex items-center cursor-pointer"
+        >
           <HomeIcon className="mr-1" />
           Home
         </BreadcrumbLink>
