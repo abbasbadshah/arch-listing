@@ -1,12 +1,15 @@
 import { Close, Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
 import logo from "../../../assets/images/Header/arclogoblack.png";
 import React, { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const navigate = useNavigate();
   const navigateToAbout = () => {
     navigate("/about");
+  };
+  const navigateToProjects = () => {
+    navigate("/projects");
   };
   useEffect(() => {
     if (isOpen) {
@@ -48,8 +51,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="/" className="block px-3 py-2 rounded-md">
-                  STUDIO
+                <a
+                  onClick={navigateToProjects}
+                  className="block px-3 py-2 rounded-md"
+                >
+                  PROJECTS
                 </a>
               </li>
               <li className="mb-2">
