@@ -1,6 +1,5 @@
-import React from "react";
-import { Accordion } from "../../components/common/Accordion";
-import { Breadcrumb } from "../../components/common/Breadcrumb";
+import React, { useState } from "react";
+import { Breadcrumb, Accordion, Pagination } from "../../components/shared";
 import { Year, Industry } from "./Filters";
 import { Bookmark, Search } from "@mui/icons-material";
 import newsImage1 from "../../assets/images/Home/News/main4.webp";
@@ -8,6 +7,10 @@ import { Layout } from "../../components/layout";
 
 export const Projects = () => {
   const breadcrumbs = [{ label: "Projects", href: "/projects" }];
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
 
   const projects = [
     {
@@ -66,7 +69,41 @@ export const Projects = () => {
       date: "16/4/24",
       image: newsImage1,
     },
+    {
+      id: 9,
+      categories: ["Bank", "Financial", "Investments"],
+      title: "First Sentier Investors, Sydney",
+      date: "16/4/24",
+      image: newsImage1,
+    },
+    {
+      id: 10,
+      categories: ["Bank", "Financial", "Investments"],
+      title: "First Sentier Investors, Sydney",
+      date: "16/4/24",
+      image: newsImage1,
+    },
+    {
+      id: 11,
+      categories: ["Bank", "Financial", "Investments"],
+      title: "First Sentier Investors, Sydney",
+      date: "16/4/24",
+      image: newsImage1,
+    },
+    {
+      id: 12,
+      categories: ["Bank", "Financial", "Investments"],
+      title: "First Sentier Investors, Sydney",
+      date: "16/4/24",
+      image: newsImage1,
+    },
   ];
+
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <Layout headerType="header2">
@@ -92,7 +129,7 @@ export const Projects = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-[#F1F1F1] rounded-lg bg-[#F1F1F1] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-[#F1F1F1] rounded-lg bg-[#F1F1F1]"
                 placeholder="Search for project, category or city"
                 required
               />
@@ -106,7 +143,7 @@ export const Projects = () => {
           </form>
           <div className="mt-4">
             <div className="grid lg:grid-cols-12 gap-5">
-              {projects.map((project) => (
+              {projects.slice(startIndex, endIndex).map((project) => (
                 <div
                   className="flex flex-col lg:col-span-3 h-[350px] overflow-hidden transition duration-300 hover:scale-105 shadow-lg rounded-xl"
                   key={project.id}
@@ -135,6 +172,13 @@ export const Projects = () => {
               ))}
             </div>
           </div>
+          {totalPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          )}
         </div>
       </div>
     </Layout>
